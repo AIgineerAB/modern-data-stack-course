@@ -1,0 +1,41 @@
+models:
+
+  - name: dim_occupation
+    description: "The dimension is a collection of unique occupation"
+
+  - name: fct_job_ads
+    description: "The facts are relevance and vacancies."
+    columns:
+      - name: occupation_id
+        description: "Foreign key, a surrogate key generated for each unique occupation."
+        data_tests:
+          - relationships:
+              to: ref('dim_occupation')
+              field: occupation_id
+      - name: relevance
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0  
+              max_value: 1 
+
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: float
+      - name: vacancies
+        data_tests: 
+          - dbt_expectations.expect_column_quantile_values_to_be_between:
+              quantile: .99
+              min_value: 1
+              max_value: 20
+          
+          - dbt_expectations.expect_column_max_to_be_between:
+              min_value: 1
+              max_value: 20
+              config:
+                severity: warn
+
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: number
+            
+
+          
+   # TODO: more tests ...

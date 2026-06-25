@@ -1,3 +1,17 @@
+# dagster
+**/.tmp*/
+
+# Mac file
+.DS_Store
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# dlt
+**/.dlt/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
