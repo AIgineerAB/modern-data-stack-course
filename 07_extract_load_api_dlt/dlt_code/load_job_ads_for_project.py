@@ -57,7 +57,7 @@ def jobsearch_resource(params):
 
 def run_pipeline(query, table_name, occupation_fields):
     pipeline = dlt.pipeline(
-        pipeline_name="jobads_demo",
+        pipeline_name="jobads_demo2",
         destination="snowflake",
         dataset_name="staging",
     )
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     os.chdir(working_directory)
 
     query = ""
-    table_name = "job_ads"
+    table_name = "jobs_by_occupations"
 
     # Teknisk inriktning, "Hälso sjukvård", "Pedagogik"
     occupation_fields = ("6Hq3_tKo_V57", "NYW6_mP6_vwf", "MVqp_eS8_kDZ")

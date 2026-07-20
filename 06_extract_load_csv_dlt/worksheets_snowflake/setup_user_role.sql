@@ -16,7 +16,7 @@ CREATE USER IF NOT EXISTS extract_loader
 USE ROLE SECURITYADMIN;
 
 GRANT ROLE movies_dlt_role TO USER extract_loader;
-GRANT ROLE movies_dlt_role TO USER MDSTRIAL;
+GRANT ROLE movies_dlt_role TO USER ;
 
 
 -- grant privileges to role
@@ -24,10 +24,8 @@ GRANT USAGE ON WAREHOUSE dev_wh TO ROLE movies_dlt_role;
 GRANT USAGE ON DATABASE movies TO ROLE movies_dlt_role;
 GRANT USAGE ON SCHEMA movies.staging TO ROLE movies_dlt_role;
 GRANT CREATE TABLE ON SCHEMA movies.staging TO ROLE movies_dlt_role;
-GRANT INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA movies.staging TO ROLE movies_dlt_role;
-GRANT INSERT, UPDATE, DELETE ON FUTURE TABLES IN SCHEMA movies.staging TO ROLE movies_dlt_role;
-GRANT SELECT ON ALL TABLES IN SCHEMA movies.staging TO ROLE movies_dlt_role;
-GRANT SELECT ON FUTURE TABLES IN DATABASE movies TO ROLE movies_dlt_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA movies.staging TO ROLE movies_dlt_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON FUTURE TABLES IN SCHEMA movies.staging TO ROLE movies_dlt_role;
 GRANT CREATE SCHEMA ON DATABASE movies TO ROLE movies_dlt_role;
 
 -- check grants

@@ -6,5 +6,6 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "dlt[parquet,snowflake]>=1.29.0",
+    "ipykernel>=7.3.0",
     "pandas>=3.0.3",
 ]

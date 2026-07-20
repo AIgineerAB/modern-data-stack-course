@@ -28,6 +28,9 @@ def jobads_resource(params):
     for ad in _get_ads(url_for_search, params)["hits"]:
         yield ad
 
+@dlt.source
+def jobads_source(params):
+    return jobads_resource(params)
 
 def run_pipeline(query, table_name):
     pipeline = dlt.pipeline(
@@ -38,7 +41,7 @@ def run_pipeline(query, table_name):
 
     params = {"q": query, "limit": 100}
 
-    load_info = pipeline.run(jobads_resource(params=params), table_name=table_name)
+    load_info = pipeline.run(jobads_source(params=params), table_name=table_name)
     print(load_info)
 
 
@@ -46,7 +49,7 @@ if __name__ == "__main__":
     working_directory = Path(__file__).parent
     os.chdir(working_directory)
 
-    query = "data engineer"
-    table_name = "data_field_job_ads"
+    query = "vvs"
+    table_name = "vvs_field_job_ads"
 
     run_pipeline(query, table_name)
