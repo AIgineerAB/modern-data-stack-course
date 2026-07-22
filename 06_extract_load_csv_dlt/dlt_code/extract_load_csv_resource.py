@@ -4,10 +4,10 @@ from pathlib import Path
 import os
 
 
-#used for extracting data from source, in this case a local csv file
-#@dlt.resource(primary_key="Title", write_disposition="merge")
-#@dlt.resource(primary_key="Title", write_disposition="merge")
-@dlt.resource(primary_key="Title", write_disposition="merge")
+# with dlt resource decorator, use the combination of write disposition and strategy to handle different use cases of data loading
+#@dlt.resource(primary_key="Title", write_disposition="replace") # for full loading
+#@dlt.resource(primary_key="Title", write_disposition="merge") # for incremental loading
+@dlt.resource(primary_key="Title", write_disposition={"disposition": "merge", "strategy": "scd2",},) # for scd2 strategy
 def load_csv_resource(file_path: str, **kwargs):
     df = pd.read_csv(file_path, **kwargs)
     yield df
@@ -23,17 +23,17 @@ if __name__ == "__main__":
     #if you are using files from .dlt, 
     # the working directory should be the direct parent of .dlt folder
     os.chdir(working_directory)
-    csv_path = working_directory / "data" / "NetflixOriginals_NewRecords.csv"
+    csv_path = working_directory / "data" / "movies_original.csv" # update with different 
     data = load_csv_resource(csv_path, encoding="latin1")
-    print(data)
+
     pipeline = dlt.pipeline(
-        pipeline_name='movies',
+        pipeline_name='movies_scd2',
         destination="snowflake",
         dataset_name='staging',
-        progress="log"
+        #progress="log"
         )
     
-    load_info = pipeline.run(data, table_name="netflix_v2")
+    load_info = pipeline.run(data, table_name="netflix_scd2")
 
     # pretty print the information on data that was loaded
     print(load_info)

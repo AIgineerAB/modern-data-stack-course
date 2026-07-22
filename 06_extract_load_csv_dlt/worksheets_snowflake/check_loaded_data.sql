@@ -13,3 +13,4 @@ SELECT * FROM netflix;
 DESC TABLE netflix;
 
 SELECT COUNT(*) FROM netflix;
+SELECT COUNT(DISTINCT Title) FROM netflix;

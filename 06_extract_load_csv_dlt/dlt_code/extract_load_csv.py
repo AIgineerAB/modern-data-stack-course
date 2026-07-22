@@ -20,13 +20,14 @@ if __name__ == "__main__":
     #if you are using files from .dlt, 
     # the working directory should be the direct parent of .dlt folder
     os.chdir(working_directory)
-    csv_path = working_directory / "data" / "NetflixOriginals.csv"
+    csv_path = working_directory / "data" / "movies_original.csv"
     data = csv_data(csv_path, encoding="latin1")
 
     pipeline = dlt.pipeline(
         pipeline_name='movies',
         destination="snowflake",
-        dataset_name='staging'
+        dataset_name='staging',
+        #progress="log"
         )
     
     load_info = pipeline.run(data, table_name="netflix")
