@@ -1,7 +1,7 @@
 #========================================#
 #                                        #
 #    This script loads job ads with      #
-#    the keyword "data engineer"         #
+#    the keyword "data"                  #
 #                                        #
 #========================================#
 
@@ -11,6 +11,7 @@ import requests
 import json
 from pathlib import Path
 import os
+
 
 def _get_ads(url_for_search, params):
     headers = {"accept": "application/json"}
@@ -28,9 +29,11 @@ def jobads_resource(params):
     for ad in _get_ads(url_for_search, params)["hits"]:
         yield ad
 
+
 @dlt.source
 def jobads_source(params):
     return jobads_resource(params)
+
 
 def run_pipeline(query, table_name):
     pipeline = dlt.pipeline(
@@ -49,7 +52,7 @@ if __name__ == "__main__":
     working_directory = Path(__file__).parent
     os.chdir(working_directory)
 
-    query = "vvs"
-    table_name = "vvs_field_job_ads"
+    query = "data"
+    table_name = "data_field_job_ads"
 
     run_pipeline(query, table_name)

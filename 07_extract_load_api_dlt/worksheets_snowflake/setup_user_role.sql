@@ -16,17 +16,17 @@ CREATE USER IF NOT EXISTS extract_loader
 USE ROLE SECURITYADMIN;
 
 GRANT ROLE job_ads_dlt_role TO USER extract_loader;
-GRANT ROLE job_ads_dlt_role TO USER ;
+GRANT ROLE job_ads_dlt_role TO USER ; -- grant to yourself for easy checking
 
 -- grant privileges to role
 GRANT USAGE ON WAREHOUSE dev_wh TO ROLE job_ads_dlt_role;
 GRANT USAGE ON DATABASE job_ads TO ROLE job_ads_dlt_role;
 GRANT USAGE ON SCHEMA job_ads.staging TO ROLE job_ads_dlt_role;
 GRANT CREATE TABLE ON SCHEMA job_ads.staging TO ROLE job_ads_dlt_role;
-
+GRANT CREATE SCHEMA ON DATABASE job_ads TO ROLE job_ads_dlt_role; -- needs for incremental loading
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA job_ads.staging TO ROLE job_ads_dlt_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON FUTURE TABLES IN SCHEMA job_ads.staging TO ROLE job_ads_dlt_role;
-GRANT CREATE SCHEMA ON DATABASE job_ads TO ROLE job_ads_dlt_role;
+
 
 -- check grants
 SHOW GRANTS ON SCHEMA job_ads.staging;
