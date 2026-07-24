@@ -8,13 +8,10 @@ SHOW TABLES IN SCHEMA staging;
 DESC TABLE staging.data_field_job_ads;
 
 USE WAREHOUSE dev_wh;
-
 SELECT
-    COUNT(*) -- compare with the total value via browser
+    headline,
+    employer__workplace
 FROM staging.data_field_job_ads;
+
 
 SELECT * FROM staging.data_field_job_ads;
-SELECT headline,
-       employer__name,
-       workplace_address__municipality
-FROM staging.data_field_job_ads;

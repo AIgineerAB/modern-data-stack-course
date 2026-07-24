@@ -4,11 +4,8 @@ from pathlib import Path
 import os
 
 
-# with dlt resource decorator, use the combination of write disposition and strategy to handle different use cases of data loading
-@dlt.resource(write_disposition="replace") # for full loading
-#@dlt.resource(primary_key="Title", write_disposition="merge") # for incremental loading
-#@dlt.resource(primary_key="Title", write_disposition={"disposition": "merge", "strategy": "scd2",},) # for scd2 strategy
-#@dlt.resource(schema_contract={"columns": "evolve"}) # for schema evolution
+#used for extracting data from source, in this case a local csv file
+@dlt.resource(write_disposition="replace")
 def load_csv_resource(file_path: str, **kwargs):
     df = pd.read_csv(file_path, **kwargs)
     yield df
@@ -24,14 +21,13 @@ if __name__ == "__main__":
     #if you are using files from .dlt, 
     # the working directory should be the direct parent of .dlt folder
     os.chdir(working_directory)
-    csv_path = working_directory / "data" / "movies_original.csv" # update with different 
+    csv_path = working_directory / "data" / "NetflixOriginals.csv"
     data = load_csv_resource(csv_path, encoding="latin1")
-
+    print(data)
     pipeline = dlt.pipeline(
         pipeline_name='movies',
         destination="snowflake",
-        dataset_name='staging',
-        #progress="log"
+        dataset_name='staging'
         )
     
     load_info = pipeline.run(data, table_name="netflix")

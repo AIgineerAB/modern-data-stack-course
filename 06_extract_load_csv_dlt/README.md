@@ -16,7 +16,7 @@ This setup requires that you have the following prerequisites already setup
 - python
 - pip
 
-If you haven't [installed Python](https://www.python.org/downloads/), install **3.12**, don't install 3.12. Also remember to tick the box: `add to path` in the installation, in order for Python to be properly installed. <!-- check if 3.13 work when installing dlt[snowflake]>
+If you haven't [installed Python](https://www.python.org/downloads/), install **3.11**, don't install 3.12. Also remember to tick the box: `add to path` in the installation, in order for Python to be properly installed.
 
 > [!WARNING]
 > Don't install several versions of python if you don't have experience in switching between versions, e.g. using pyenv.

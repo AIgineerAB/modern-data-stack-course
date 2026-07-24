@@ -1,7 +1,7 @@
 #========================================#
 #                                        #
 #    This script loads job ads with      #
-#    the keyword "data"                  #
+#    the keyword "data engineer"         #
 #                                        #
 #========================================#
 
@@ -11,7 +11,6 @@ import requests
 import json
 from pathlib import Path
 import os
-
 
 def _get_ads(url_for_search, params):
     headers = {"accept": "application/json"}
@@ -30,11 +29,6 @@ def jobads_resource(params):
         yield ad
 
 
-@dlt.source
-def jobads_source(params):
-    return jobads_resource(params)
-
-
 def run_pipeline(query, table_name):
     pipeline = dlt.pipeline(
         pipeline_name="jobsearch",
@@ -44,7 +38,7 @@ def run_pipeline(query, table_name):
 
     params = {"q": query, "limit": 100}
 
-    load_info = pipeline.run(jobads_source(params=params), table_name=table_name)
+    load_info = pipeline.run(jobads_resource(params=params), table_name=table_name)
     print(load_info)
 
 
@@ -52,7 +46,7 @@ if __name__ == "__main__":
     working_directory = Path(__file__).parent
     os.chdir(working_directory)
 
-    query = "data"
+    query = "data engineer"
     table_name = "data_field_job_ads"
 
     run_pipeline(query, table_name)
