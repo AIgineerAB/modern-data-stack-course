@@ -57,7 +57,7 @@ You will see a paranthesis around your directory name in the terminal when your 
 uv pip install "dlt[snowflake]" ipykernel pandas "dlt[parquet]"
 ```
 
-> [!NOTE] > `"dlt[snowflake]"` means installing `dlt` and its dependencies for connecting to snowflake
+> [!NOTE]  "dlt[snowflake]" means installing `dlt` and its dependencies for connecting to snowflake
 
 Now check that dlt is installed by typing `dlt --version` in your terminal. Also check the other packages using `pip list`.
 
@@ -93,21 +93,13 @@ role = "movies_dlt_role"
 
 ### dlt load
 
-Run the script _load_snowflake.py_ and control that the data has been loaded to snowflake.
+Run the script _load_csv.py_ and control that the data has been loaded to snowflake.
+
 
 ## Other videos :video_camera:
 
 - [Data ingestion from APIs to warehouses - A. Brudaru (2024)](https://www.youtube.com/watch?v=oLXhBM7nf2Q&list=PLoHF48qMMG_R3Migi4SBLkqhkLHDzmEsL)
 
-**Archived**
-Video on dlt setup part 1 :point_down:
-[![setup dlt part 1](https://github.com/kokchun/assets/blob/main/data_warehouse/setup_dlt_1.png?raw=true)](https://youtu.be/u4map_3j9LA)
-
-Video on dlt setup part 2 - setting up roles and user in snowflake :point_down:
-[![setup dlt part 2](https://github.com/kokchun/assets/blob/main/data_warehouse/setup_dlt_2.png?raw=true)](https://youtu.be/NdM4iYw37B8)
-
-Video on dlt setup part 3 - loading csv file to snowflake :point_down:
-[![setup dlt part 3](https://github.com/kokchun/assets/blob/main/data_warehouse/setup_dlt_3.png?raw=true)](https://youtu.be/KOn6XRDrT8s)
 
 ## Read more :eyeglasses:
 
