@@ -12,14 +12,10 @@ Coding part
 </a>
 
 
-
-
-
-
 Read [dlthub documentation for loading data from API](https://dlthub.com/devel/tutorial/load-data-from-an-api). 
 
 > [!NOTE]
-> We will only do simple loading from API and won't go through incremental loading and pagination. Also we won't use API which requires a secret in the lecture, but there will be an exercise on it.
+> We won't use API which requires a secret in the lecture, but there will be an exercise on it.
 
 
 ## Set up in snowflake
@@ -52,16 +48,6 @@ Run the script *load_job_ads.py* and control that the data has been loaded to sn
 
 
 ## Other videos
-
-**Archived**
-Video on EDA of jobtech API :point_down:
-[![EDA on jobtech API](https://github.com/kokchun/assets/blob/main/data_warehouse/EDA_job_ads_video.png?raw=true)](https://youtu.be/HB6Y8eMQ8w0)
-
-Video on roles, user and database setup for jobtech :point_down:
-[![roles, user and database setup](https://github.com/kokchun/assets/blob/main/data_warehouse/roles_jobtech_video.png?raw=true)](https://www.youtube.com/watch?v=EfN1PrpUPyM)
-
-Video on extract and loading data from jobtech API to snowflake with dlt :point_down:
-[![extract and load data from dlt to snowflake](https://github.com/kokchun/assets/blob/main/data_warehouse/dlt_jobtech_video.png?raw=true)](https://www.youtube.com/watch?v=PEmcikWd93o)
 
 
 ## Read more :eyeglasses:
