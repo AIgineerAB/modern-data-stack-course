@@ -10,6 +10,7 @@ def query_job_listings(query='SELECT * FROM mart_technical_jobs'):
 
     with snowflake.connector.connect(
         user=os.getenv("SNOWFLAKE_USER"),
+        #private_key_file=os.getenv("SNOWFLAKE_RSA_KEY"), # for key-pair authentication
         password=os.getenv("SNOWFLAKE_PASSWORD"),
         account=os.getenv("SNOWFLAKE_ACCOUNT"),
         warehouse=os.getenv("SNOWFLAKE_WAREHOUSE"),
