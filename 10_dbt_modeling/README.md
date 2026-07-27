@@ -64,24 +64,7 @@ as employer_id,
 
 ## Other videos :video_camera:
 
-archieved 
-
-
-[![developing in dbt](https://github.com/kokchun/assets/blob/main/data_warehouse/developing_dbt_video.png?raw=true)](https://youtu.be/PnSL_CPWKxI)
-
-Video on dbt coding to transform data part 1 :point_down:
-[![dbt transformations part 1](https://github.com/kokchun/assets/blob/main/data_warehouse/dbt_transformations_part1.png?raw=true)](https://youtu.be/aiYLvu6h0dM)
-
-Video on dbt coding to transform data part 2 :point_down:
-[![dbt transformations part 2](https://github.com/kokchun/assets/blob/main/data_warehouse/dbt_transformations_part2_video.png?raw=true)](https://youtu.be/HMvYN3Vdvao)
-
-Video on dbt coding to transform data part 3 :point_down:
-[![dbt transformations part 3](https://github.com/kokchun/assets/blob/main/data_warehouse/dbt_transformations_part3_video.png?raw=true)](https://youtu.be/z0G3KoDryww)
-
-
-
-
-from Kahan data solutions
+From Kahan data solutions:
 
 - [Tips to improve your dbt projects](https://www.youtube.com/watch?v=qOx8l_QFz9I&list=PLy4OcwImJzBLJzLYxpxaPUmCWp8j1esvT&index=2)
 - [Add raw sources to your dbt project](https://www.youtube.com/watch?v=Y03CsVDK69Y&list=PLy4OcwImJzBLJzLYxpxaPUmCWp8j1esvT&index=3)
