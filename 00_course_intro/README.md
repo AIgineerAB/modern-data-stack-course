@@ -8,14 +8,10 @@ Video on data warehouse intro :point_down: <br>
 
 This section gives a background that leads to the need for a data warehouse and an introduction to what a data warehouse and its lifecycle is.
 
-## What is modern data stack?
-<img src="https://github.com/kokchun/assets/blob/main/data_warehouse/data_stacks.png?raw=true" alt="databricks setup free edition" width="600">
+## Data pipeline 
+Throughout this course, we will be building a data pipeline with modern data stack, to support the whole data warehouse lifecycle.
 
-<!-- - 3 paradigms + AI intelligence platform?
-- Change in mkt share
-- main purpose of MDS defined in this course. what are other patterns and purpose like AI?
-- alternatives to components (VG)
-- MDS (optimized for BI?) -->
+[Slide for our data pipeline](./slides_data_pipeline.pdf)
 
 ## Other videos :video_camera:
 - [Data Architecture 101: The Modern Data Warehouse - Kahan Data Solutions (2023)](https://www.youtube.com/watch?v=NARrRbFKHeI)
