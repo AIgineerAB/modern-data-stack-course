@@ -8,11 +8,6 @@ Video on data warehouse intro :point_down: <br>
 
 This section gives a background that leads to the need for a data warehouse and an introduction to what a data warehouse and its lifecycle is.
 
-## Data pipeline 
-Throughout this course, we will be building a data pipeline with modern data stack, to support the whole data warehouse lifecycle.
-
-[Slide for our data pipeline](./slides_data_pipeline.pdf)
-
 ## Other videos :video_camera:
 - [Data Architecture 101: The Modern Data Warehouse - Kahan Data Solutions (2023)](https://www.youtube.com/watch?v=NARrRbFKHeI)
 Ö
