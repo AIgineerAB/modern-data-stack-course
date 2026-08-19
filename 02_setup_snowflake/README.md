@@ -1,7 +1,8 @@
 # Setup
 
 Video on snowflake and snowsql setup :point_down:
-
+> [!NOTE]
+> While the main steps in the tutorial video are accurate, Snowflake's web interface may have changed and could look different from what you see in the video. Please use the instructions in the lecture notes as your primary reference while following along 
 [![setup snowflake](https://github.com/kokchun/assets/blob/main/data_warehouse/setup_snowflake_video.png?raw=true)](https://www.youtube.com/watch?v=i454nHjdMAc)
 
 This setup requires that you have the following prerequisites already setup
@@ -13,9 +14,9 @@ This setup requires that you have the following prerequisites already setup
 
 If you don't know how to work with git, and github, follow this [tutorial series](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR). Furthermore, it is good to have some basic knowledge in the CLI, e.g. bash or git bash as this course will heavily rely upon CLI.
 
-## Snowflake account
+## 1. Snowflake account
 
-Now we will create a [snowflake free trial account](https://signup.snowflake.com/), which can be used for 30 days, with $400 credits.
+Now we will create a [snowflake free trial account](https://signup.snowflake.com/), which can be used for 30 days, with $400 credits. After the 30 days, you can use the same email to create a new free trial account. You just need to create again necessary users, roles, databases, etc., for your pipelines. 
 
 > [!NOTE]
 > Pick enterprise version, Microsoft Azure and West Europe (Netherlands).
@@ -27,7 +28,7 @@ Now we will create a [snowflake free trial account](https://signup.snowflake.com
 > It is recommended to set up MFA for all *human* accounts. With MFA, there will be some additional steps in logging into SnowSQL though. 
 
 
-## SnowSQL setup
+## 2. SnowSQL setup
 
 SnowSQL is a CLI tool for snowflake which we will be using. The reason for us to use this is to version control our SQL scripts using git and github, and also to have everything in one place in our repository.
 
@@ -142,9 +143,9 @@ To find your `Account Locator`:
 In snowflake go into `admin` and then `users & roles` to find your user.
 
 
-### Snowflake extension
+## 3. Snowflake extension
 
-Now install snowflake extension on vscode by searching for snowflake or use this link: [snowflake extension for vscode](https://marketplace.visualstudio.com/items?itemName=snowflake.snowflake-vsc).
+Now install snowflake extension on vscode by searching for Snowflake on vscode extensions marketplace or use this link: [snowflake extension for vscode](https://marketplace.visualstudio.com/items?itemName=snowflake.snowflake-vsc).
 
 
 ### Snowsql config path
