@@ -1,8 +1,6 @@
 # Setup
 
-Video on snowflake and snowsql setup :point_down:
-> [!NOTE]
-> While the main steps in the tutorial video are accurate, Snowflake's web interface may have changed and could look different from what you see in the video. Please use the instructions in the lecture notes as your primary reference while following along 
+Video on snowflake and snowsql setup [TO BE UPDATED] :point_down:
 
 [![setup snowflake](https://github.com/kokchun/assets/blob/main/data_warehouse/setup_snowflake_video.png?raw=true)](https://www.youtube.com/watch?v=i454nHjdMAc)
 
@@ -13,7 +11,7 @@ This setup requires that you have the following prerequisites already setup
 - git bash (for windows)
 - github account
 
-If you don't know how to work with git, and github, follow this [tutorial series](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR). Furthermore, it is good to have some basic knowledge in the CLI, e.g. bash or git bash as this course will heavily rely upon CLI.
+If you don't know how to work with git, and github, follow this [tutorial series](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR). 
 
 ## 1. Snowflake account
 
@@ -29,148 +27,23 @@ Now we will create a [snowflake free trial account](https://signup.snowflake.com
 > It is recommended to set up MFA for all *human* accounts. With MFA, there will be some additional steps in logging into SnowSQL though. 
 
 
-## 2. SnowSQL setup
+## 2. Snowflake extension
 
-SnowSQL is a CLI tool for snowflake which we will be using. The reason for us to use this is to version control our SQL scripts using git and github, and also to have everything in one place in our repository.
-
-Go into [this page](https://developers.snowflake.com/snowsql/) and find your operating system for installing snowsql.
-
-<details> <summary> <b>Windows installation</b></summary>
-
-After you've installed snowsql for windows, go into git bash and try out the following command
-
-```bash
-snowsql -v
-```
-
-It works if you get back a version number. Also try
-
-```bash
-snowsql
-```
-
-to see some of the options. Now navigate to the .snowsql directory, it should be installed here `/c/Users/<your_user>/.snowsql`. You can navigate there using `cd` and then do
-
-```bash
-code config
-```
-
-if you have configured the `code` before. Otherwise just open it in notepad using
-
-```bash
-notepad config
-```
-
-</details>
-
-</br>
-
-<details> 
-<summary> <b>Mac installation</b></summary>
-    
-Either use the isntallation package provided above or use homebrew.
-
-If using homebrew type in this command in mac terminal
-
-```bash
-brew install --cask snowflake-snowsql
-```
-
-Try the command in mac terminal
-
-```bash
-snowsql -v
-```
-
-It works if you get back a version number. Also try
-
-```bash
-snowsql
-```
-
-If it doesn't work you need to configure an alias to snowsql
-
-1. Open (or create, if missing) the ~/.zshrc file.
-
-2. Add the following line:
-
-```bash
-alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
-```
-
-3. Save the file.
-
-4. Retry the commands above to see if snowsql is working.
-
-Now go into your terminal and navigate to `.snowsql` folder
-
-```bash
-cd ~/.snowsql
-```
-
-Open config file with `code config` if you have `code` configured on your mac otherwise use `open config` to open it in a text editor.
-
-</details>
-
-### config file
-
-Inside config file fill in
-
-```yaml
-[connections.dwh_course] # before this was [connections.example]
-accountname = <ACCOUNT LOCATOR>.west-europe.azure
-username =
-password =
-warehousename = COMPUTE_WH
-```
-
-> [!NOTE]
-> move on to accountname section to find accountname <br>
-> move on to username section to find username
-
+Now install snowflake extension on vscode by searching for Snowflake on vscode extensions marketplace. After installation, you can click on the Snowflake icon on vscode to connect to your snowflake account. You will be asked to provide:
 
 ### accountname
-
 `accountname` is composed of `Account Locator`. `Region` and `Cloud Platform` of your Snowflake account. If you follows our steps above, `Region` is *west-europe* and `Cloud platform` is *azure*. 
 
 To find your `Account Locator`:
 - log into your account on Snowflake web interface
 - open the account selector on the left bottom corner
 - click on *View account details* to find your `Account Locator`
-  
 
-### username
-
-In snowflake go into `admin` and then `users & roles` to find your user.
+### username and password
+Use the username and password to fill in when setting up your account. You can also find the user name in the homepage of your Snowflake account: go into `Governance and Security` and then `users & roles` to find your user.
 
 
-## 3. Snowflake extension
-
-Now install snowflake extension on vscode by searching for Snowflake on vscode extensions marketplace or use this link: [snowflake extension for vscode](https://marketplace.visualstudio.com/items?itemName=snowflake.snowflake-vsc).
-
-
-### Snowsql config path
-
-Go into settings in your vscode with `ctrl+shift+p` or `cmd+shift+p`, then type and click on
-
-```
-Preferences: Open User Settings
-```
-
-Now type in `snowsql` and paste in the path to your snowsql config file. You can find the path through navigating to .snowsql directory and type
-
-```bash
-pwd 
-```
-
-then add "/config" to the ending of that path. 
-
-> [!IMPORTANT]
-> If you are on **windows**, you might get `c:/Users/...` from `pwd`.
->  
-> Make sure to remove `c:` so the final path could be something like `/Users/aigineer/.snowsql/config` 
-
-## 4. Create a github repository
+## 3. Create a github repository
 
 Now we will create a github repository online, then clone it, so that you can work with it locally. Name your github repository as follows and make it public
 
@@ -189,7 +62,8 @@ Now create the following directories to organize your files:
 - code-alongs
 - explorations
 
-## 5. Test snowsql's connection
+
+## 4. Test connection
 
 Navigate to your repository and create a file called `test_snowsql.sql` and add a few statements 
 
@@ -203,14 +77,11 @@ SHOW TABLES;
 SELECT * FROM CUSTOMER;
 ```
 
-Make sure to have logged in to snowflake through its vscode extension. 
-
 > [!NOTE]
 > You might need to change the language mode to snowflake SQL if it isn't set by default
 
 > [!NOTE]
 > Use ctrl+enter or cmd+enter to run each sql statements through snowflake.
-
 
 ## Other videos :video_camera:
 

@@ -1,6 +1,8 @@
 # Course structure
 
 Video on the course structure :point_down:
+> [!NOTE]
+> The video mentions snowsql but we have simplified the set up so that we will not be using it any longer
 
 [![course structure](https://github.com/kokchun/assets/blob/main/data_warehouse/course_structure_video.png?raw=true)](https://youtu.be/dzI71WhlOpU)
 
