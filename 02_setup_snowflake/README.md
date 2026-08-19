@@ -170,7 +170,7 @@ then add "/config" to the ending of that path.
 >  
 > Make sure to remove `c:` so the final path could be something like `/Users/aigineer/.snowsql/config` 
 
-## Create a github repository
+## 4. Create a github repository
 
 Now we will create a github repository online, then clone it, so that you can work with it locally. Name your github repository as follows and make it public
 
@@ -189,7 +189,7 @@ Now create the following directories to organize your files:
 - code-alongs
 - explorations
 
-## Test snowsql
+## 5. Test snowsql's connection
 
 Navigate to your repository and create a file called `test_snowsql.sql` and add a few statements 
 
