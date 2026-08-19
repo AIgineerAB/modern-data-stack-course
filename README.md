@@ -4,7 +4,7 @@ In this course, you'll dive into the concepts of data warehouse and its lifecycl
 
 - building data pipelines
 - modern data stack
-- ETL/ELT
+- ELT
 - dimensional modeling
 - data transformations
 - testing
@@ -15,7 +15,6 @@ In this course, you'll dive into the concepts of data warehouse and its lifecycl
 For this you will be using the following tools:
 
 - snowflake
-- snowsql
 - dlt
 - dbt
 - dbdiagram
