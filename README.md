@@ -46,8 +46,8 @@ This plan is an overview of the contents covered in each study week.
 | 2          | snowflake access control, data ingestion with dlt  | 05-07    | 1             |
 | 3          | dimensional modeling, data transformation with dbt | 08-10    | 2             |
 | 4          | data testing with dbt, streamlit dashboard         | 11-13    | 2             |
-| 5          | orchestration with dagster                         | 15       | project intro |
-| 6          | cloud deployment                                   | 16       | project       |
+| 5          | orchestration with dagster                         | 14       | project intro |
+| 6          | cloud deployment                                   | 15       | project       |
 | 7          | -                                                  | -       | project       |
 
 > [!NOTE]

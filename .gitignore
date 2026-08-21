@@ -1,3 +1,8 @@
+# uv virtual
+uv.lock
+.python-version
+pyproject.toml
+
 # dagster
 **/.tmp*/
 
