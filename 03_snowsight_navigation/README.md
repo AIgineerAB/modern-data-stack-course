@@ -1,8 +1,6 @@
 # Snowsight navigation
 
-<!-- [![video](https://github.com/kokchun/assets/blob/025ae8622a25d5522d11b21108f52f1df9388ea2/data_warehouse/snowflake_free_trial.png?raw=true)](https://github.com/kokchun/assets/blob/025ae8622a25d5522d11b21108f52f1df9388ea2/data_warehouse/snowflake_free_trial.png?raw=true) -->
-
-Video on snowsight navigation <span style="color:red">This video will be updated soon to match the latest interfaces of snowsight</span> :point_down:
+Video on snowsight navigation <span style="color:red">[This video will be updated soon to match the latest interfaces of snowsight]</span> :point_down:
 [![snowsight](https://github.com/kokchun/assets/blob/main/data_warehouse/snowsight_video.png?raw=true)](https://youtu.be/k260IXXxyDE)
 
 
