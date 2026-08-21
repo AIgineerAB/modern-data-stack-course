@@ -52,7 +52,8 @@ You will see a paranthesis around your directory name in the terminal when your 
 uv pip install "dlt[snowflake]" ipykernel pandas "dlt[parquet]"
 ```
 
-> [!NOTE]  "dlt[snowflake]" means installing `dlt` and its dependencies for connecting to snowflake
+> [!NOTE]  
+> "dlt[snowflake]" means installing `dlt` and its dependencies for connecting to snowflake
 
 Now check that dlt is installed by typing `dlt --version` in your terminal. Also check the other packages using `pip list`.
 
