@@ -16,11 +16,6 @@ This setup requires that you have the following prerequisites already setup
 - python
 - pip
 
-If you haven't [installed Python](https://www.python.org/downloads/), install **3.11**, don't install 3.12. Also remember to tick the box: `add to path` in the installation, in order for Python to be properly installed.
-
-> [!WARNING]
-> Don't install several versions of python if you don't have experience in switching between versions, e.g. using pyenv.
-
 ## Virtual environment
 
 We'll be using a virtual environment with the [uv package](https://github.com/astral-sh/uv), which is a package installer and resolver for Python. Start by installing uv globally using this command
