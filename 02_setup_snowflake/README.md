@@ -1,6 +1,6 @@
 # Setup
 
-Video on snowflake and snowsql setup [TO BE UPDATED] :point_down:
+Video on snowflake and snowsql setup <span style="color:red">This video will be updated soon to match the updated written instructions below</span> :point_down:
 
 [![setup snowflake](https://github.com/kokchun/assets/blob/main/data_warehouse/setup_snowflake_video.png?raw=true)](https://www.youtube.com/watch?v=i454nHjdMAc)
 
