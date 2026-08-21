@@ -27,9 +27,13 @@ Use the correct role and do the following
 
 Load this [marketing data](https://www.kaggle.com/datasets/fayez7/ifood-marketing-campaigns) into the staging layer using dlt.
 
-## 3. Load parking API to snowflake (\*\*)
+## 3. Load parking API to snowflake
 
-Start by asking for an API key in [open stockholm `Trafikkontorets trafik- och vägdata som öppna data`](https://openstreetgs.stockholm.se/home/). Then go into [parkering - API](https://openstreetgs.stockholm.se/Home/Parking), read the documentation and try to load some data you find interesting into snowflake.
+In this exercise, you will explore the use of API data requiring an API key. Use the ```secrets.toml``` to store your API key and make sure that you don't track this file with git.
+
+&nbsp; a) Start by asking for an API key in [open stockholm `Trafikkontorets trafik- och vägdata som öppna data`](https://openstreetgs.stockholm.se/home/). 
+
+&nbsp; b) Then go into [parkering - API](https://openstreetgs.stockholm.se/Home/Parking), read the documentation and try to load some data you find interesting into snowflake. Remember to use an appropriate user and role for this loading task. 
 
 ## 4. Theory questions
 
@@ -86,5 +90,3 @@ Fill in this table either by copying this into your own markdown file or copy it
 | resource dlt        |             |
 | source dlt          |             |
 | yield python        |             |
-|                     |             |
-|                     |             |
