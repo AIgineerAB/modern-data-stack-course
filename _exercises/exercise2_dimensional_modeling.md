@@ -33,7 +33,6 @@ In this task you will work with [ice cream dataset from kaggle](https://www.kagg
 - fct_reviews
 - dim_authors
 - dim_products
-- dim_review
 
 &nbsp; d) Use dbt to make the transformations into the warehouse layer.
 
