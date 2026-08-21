@@ -2,10 +2,7 @@
 
 <!-- [![video](https://github.com/kokchun/assets/blob/025ae8622a25d5522d11b21108f52f1df9388ea2/data_warehouse/snowflake_free_trial.png?raw=true)](https://github.com/kokchun/assets/blob/025ae8622a25d5522d11b21108f52f1df9388ea2/data_warehouse/snowflake_free_trial.png?raw=true) -->
 
-Video on snowsight navigation :point_down:
-> [!NOTE]
-> While the main contents in the video are accurate, Snowflake's web interface may have changed and could look different from what you see in the video.
-
+Video on snowsight navigation <span style="color:red">This video will be updated soon to match the latest interfaces of snowsight</span> :point_down:
 [![snowsight](https://github.com/kokchun/assets/blob/main/data_warehouse/snowsight_video.png?raw=true)](https://youtu.be/k260IXXxyDE)
 
 
