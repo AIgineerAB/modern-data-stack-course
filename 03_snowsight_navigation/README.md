@@ -1,8 +1,13 @@
 # Snowsight navigation
 
-Video on snowsight navigation <span style="color:red">[This video will be updated soon to match the latest interfaces of snowsight]</span> :point_down:
-[![snowsight](https://github.com/kokchun/assets/blob/main/data_warehouse/snowsight_video.png?raw=true)](https://youtu.be/k260IXXxyDE)
+Video on snowsight navigation 
 
+<a href="https://youtu.be/HEfC46uY8NE" target="_blank">
+  <img src="https://github.com/kokchun/assets/blob/main/data_warehouse/snowsight_navigation.png?raw=true" alt="navigating around in snowsight" width="600">
+</a>
+
+<br>
+<br>
 
 Snowsight is the web interface of snowflake. It is a GUI in which you practically can do anything in snowflake. For example you could use snowsight to create and manage 
 

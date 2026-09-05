@@ -1,8 +1,14 @@
 # Setup
 
-Video on snowflake and snowsql setup <span style="color:red">[This video will be updated soon to match the updated written instructions below]</span> :point_down:
+Video on snowflake and snowsql setup 
 
-[![setup snowflake](https://github.com/kokchun/assets/blob/main/data_warehouse/setup_snowflake_video.png?raw=true)](https://www.youtube.com/watch?v=i454nHjdMAc)
+<a href="https://youtu.be/a1z40Qh2KBk" target="_blank">
+  <img src="https://github.com/kokchun/assets/blob/main/data_warehouse/snowflake_vscode_setup.png?raw=true" alt="setup vscode and snowflake" width="600">
+</a>
+
+
+<br>
+<br>
 
 This setup requires that you have the following prerequisites already setup
 
