@@ -2,12 +2,12 @@
 
 Video on dlt theory :point_down:
 
-[![theory on dlt](https://github.com/kokchun/assets/blob/main/data_warehouse/dlt_intro_video.png?raw=true)](https://youtu.be/m4zrj5ZUWs4)
+[![theory on dlt](https://github.com/kokchun/assets/blob/main/data_warehouse/dlt_intro_video.png?raw=true)](https://www.youtube.com/watch?v=bUdTAZZnwow)
 
 
 Video on dlt to extract and load csv into snowflake :point_down:
 
-<a href="https://www.youtube.com/watch?v=bUdTAZZnwow" target="_blank">
+<a href="https://www.youtube.com/watch?v=3zrs7CBPjaE" target="_blank">
   <img src="https://github.com/kokchun/assets/blob/main/data_engineering/dlt_csv_snowflake.png?raw=true" alt="dlt for EL csv to snowflake" width="1000">
 </a>
 
